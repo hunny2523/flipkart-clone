@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Title and Favicon -->
     <title>FlipKart</title>
 
@@ -27,40 +29,52 @@
 
     <header id="header">
 
-        <div id="nav-container">
-            <div id="navbar-logo-block">
+        <nav id="nav-container">
 
-                <a href="#" id="nav-logo-link"><img src="./assests/images/flipkart-plus_8d85f4.png" alt="FlipKart"
-                        id="nav-logo" width="75px"></a>
-                <div id="nav-explore-plus">Explore Plus</div>
+            <div id="navbar-logo-search">
+
+                <div class="nav-logo-block">
+
+                    <a href="#" id="nav-logo-link">
+                        <img src="./assests/images/flipkart-plus_8d85f4.png" alt="FlipKart" id="nav-logo" width="75px">
+                    </a>
+                    <div id="nav-explore-plus"> <em>Explore</em> <em style="color: yellow;">Plus</em>
+                        <img src="./assests/images/plus_aef861.png" alt="" width="10px">
+                    </div>
+
+                </div>
+
+                <div class="nav-search-bar">
+
+                    <input type="text" placeholder="Search for fashion,brands and more">
+                    <span class="material-symbols-outlined" id="nav-search-icon">search</span>
+
+                </div>
 
             </div>
 
 
-            <nav id="navbar">
-                <div class="nav-search-bar">
-                    <input type="text" class="search-input" placeholder="Search for fashion,brands and more">
-                    <span class="material-symbols-outlined" id="nav-search-icon">
-                        search
-                    </span>
-                </div>
+            <ul id="nav-items">
+                <li>
+                    <a href="#" class="nav-link">
+                        <button class="btn" id="login-btn">Login</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <span class="nav-span-text">More</span>
+                        <span class="material-symbols-outlined nav-icons">expand_more</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <span class="material-symbols-outlined nav-icons">shopping_cart</span>
+                        <span class="nav-span-text">Cart</span>
+                    </a>
+                </li>
+            </ul>
 
-                <ul id="nav-items">
-                    <li><a href="#" class="nav-link"><button class="btn" id="login-btn">Login</button></a>
-                    </li>
-                    <li><a href="#" class="nav-link"><span class="nav-span-text">More</span><span
-                                class="material-symbols-outlined nav-icons">
-                                expand_more
-                            </span>
-                        </a></li>
-                    <li><a href="#" class="nav-link"><span class="material-symbols-outlined nav-icons">
-                                shopping_cart
-                            </span><span class="nav-span-text">Cart</span></a></li>
-                </ul>
-
-            </nav>
-
-        </div>
+        </nav>
 
     </header>
 

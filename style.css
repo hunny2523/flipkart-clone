@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "calibiri", "Arial", "Georgia";
 }
 
 li {
@@ -14,20 +15,17 @@ a {
   text-decoration: none;
 }
 
-input {
-  border: none;
-  display: block;
-}
-
 button {
   cursor: pointer;
 }
 
 input {
+  border: none;
+  display: block;
   width: 100%;
   padding: 10px;
   border-radius: 2px;
-  margin-inline: 10px;
+  margin-inline: 5px;
 }
 
 img {
@@ -44,52 +42,36 @@ img {
   border: none;
 }
 
-/* Navbar */
+/*--------- Navbar---------- */
 
 #header {
   background: #2874f0;
-  padding-block: 14px;
+  padding-block: 12px;
   color: white;
 }
 
 #nav-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
 }
 
-#navbar {
-  display: flex;
+#navbar-logo-search {
   flex: 1;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: flex;
   align-items: center;
 }
 
-#nav-items {
-  align-self: center;
-  top: 0;
-}
-
-#nav-items li {
-  display: inline-block;
-}
-
-.nav-link {
-  color: white;
-  margin-left: 20px;
-  align-self: center;
-}
-
-.nav-icons {
-  vertical-align: middle;
+#nav-explore-plus {
+  font-size: small;
 }
 
 .nav-search-bar {
   position: relative;
   flex: 1;
-  max-width: 25rem;
+  max-width: 30rem;
 }
 
 #nav-search-icon {
@@ -99,30 +81,55 @@ img {
   color: blue;
 }
 
+#nav-items li {
+  display: inline-block;
+}
+
+.nav-link {
+  color: white;
+  margin-left: 5px;
+}
+
+.nav-icons {
+  vertical-align: middle;
+}
+
 #login-btn {
   background-color: white;
   color: blue;
   padding: 5px 30px;
 }
 
-@media (min-width: 1024px) {
+/* Navbar responsive------------- */
+
+@media (min-width: 1025px) {
   #nav-container {
-    max-width: 64%;
+    max-width: 65%;
+  }
+  .nav-search-bar {
+    margin-right: 15px;
   }
 }
 
 @media (max-width: 1024px) {
   #nav-container {
-    margin-inline: 20px;
-  }
-  #navbar {
+    margin-inline: 15px;
     justify-content: space-evenly;
+  }
+  .nav-span-text {
+    display: none;
   }
 }
 
-@media (max-width: 768px) {
-  .nav-span-text {
+@media (max-width: 619px) {
+  #nav-items {
     display: none;
-    color: red;
+  }
+  .nav-search-bar input:placeholder-shown {
+    font-size: 10px;
   }
 }
+
+/* ----------------------------------
+            Navbar Completed
+------------------------------------*/
