@@ -7,6 +7,10 @@
   font-family: "calibiri", "Arial", "Georgia";
 }
 
+body {
+  background-color: #f1f3f6;
+}
+
 li {
   list-style: none;
 }
@@ -38,7 +42,7 @@ img {
   cursor: pointer;
   padding: 5px 10px;
   font-weight: 400;
-  border-radius: 2px;
+  border-radius: 1px;
   border: none;
 }
 
@@ -46,7 +50,7 @@ img {
 
 #header {
   background: #2874f0;
-  padding-block: 12px;
+  padding-block: 10px;
   color: white;
 }
 
@@ -71,7 +75,7 @@ img {
 .nav-search-bar {
   position: relative;
   flex: 1;
-  max-width: 30rem;
+  max-width: 25rem;
 }
 
 #nav-search-icon {
@@ -97,7 +101,7 @@ img {
 #login-btn {
   background-color: white;
   color: blue;
-  padding: 5px 30px;
+  padding: 8px 40px;
 }
 
 /* Navbar responsive------------- */
@@ -133,3 +137,45 @@ img {
 /* ----------------------------------
             Navbar Completed
 ------------------------------------*/
+
+/* -----------product categories--------- */
+
+#product-categories {
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+  background-color: white;
+  width: 100%;
+}
+
+.categories-container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+#category-items {
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.category-item {
+  flex: 1;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+.category-item-name {
+  text-align: center;
+  margin-block: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.category-image {
+  max-height: 100px;
+  max-width: 60px;
+}
+
+/* ------------------------------- 
+      Categories Completed
+----------------------------------*/
