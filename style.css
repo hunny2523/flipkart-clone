@@ -202,7 +202,7 @@ img {
 
 /* for all grid items */
 .main-container-grid-item {
-  background-color: white;
+  background-color: white !important;
   margin: 5px;
 }
 
@@ -227,7 +227,7 @@ img {
   align-items: center;
 }
 
-.product-list-btn-view-all {
+.main-container-blue-btn {
   background-color: #2874f0;
   color: white;
 }
@@ -337,8 +337,29 @@ img {
 /* ----------Aside of best deals----------- */
 
 #special-offer-section {
+  background: url("./assests/images/Aside-deals.jpg") no-repeat bottom;
+}
+#special-offer-section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85%;
+  width: 100%;
 }
 
+.aside-Text {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 35px;
+}
+
+.aside-Text + button {
+  font-size: medium;
+  box-shadow: 1px 1px 6px gray;
+  padding: 10px 20px;
+}
 /* --------------------responsive container------------------------ */
 
 @media (max-width: 768px) {
