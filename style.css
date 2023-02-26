@@ -40,11 +40,19 @@ img {
 
 .btn {
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 8px 10px;
   font-weight: 400;
-  border-radius: 1px;
+  border-radius: 2px;
   border: none;
+  white-space: nowrap;
 }
+
+.ft-large {
+  font-weight: 600;
+  font-size: large;
+}
+
+/* ------------------------------------------------------------------------------ */
 
 /*--------- Navbar---------- */
 
@@ -180,9 +188,9 @@ img {
       Categories Completed
 ----------------------------------*/
 
-/* ----------------------------------- 
-        Product List -1
---------------------------------------*/
+/* ---------------------------------------------- 
+                         Main Container
+-----------------------------------------------------------*/
 
 #main-container {
   display: grid;
@@ -192,10 +200,15 @@ img {
   margin: 8px auto;
 }
 
+/* for all grid items */
 .main-container-grid-item {
   background-color: white;
   margin: 5px;
 }
+
+/* ------------------------------------------------------------------- 
+        Product List -1  & product List 2 common classess
+----------------------------------------------------------------------*/
 
 #product-list-1,
 #product-list-2 {
@@ -204,25 +217,19 @@ img {
   flex-direction: column;
 }
 
-.best-deal-and-time {
-  padding: 20px;
+.product-list-header {
+  padding: 15px;
   border-bottom: 1px solid rgb(192, 192, 192);
   max-height: 70px;
   max-width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 
-.deals-text {
-  font-weight: 600;
-  font-size: large;
-  margin-right: 10px;
-}
-
-.clock-icon {
-  color: red;
-  margin-inline: 10px;
+.product-list-btn-view-all {
+  background-color: #2874f0;
+  color: white;
 }
 
 .product-list-items {
@@ -238,6 +245,7 @@ img {
   padding: 15px 25px;
   white-space: nowrap;
   align-items: center;
+  max-width: 220px;
 }
 
 .product-list-item-name {
@@ -249,8 +257,9 @@ img {
   font-size: smaller;
 }
 
-.product-item-img {
-  flex: 1;
+.product-list-item-discount {
+  color: green;
+  font-size: small;
 }
 
 .product-list-item img {
@@ -270,28 +279,54 @@ img {
   overflow: hidden;
 }
 
-.product-list-item-discount {
-  color: green;
-  font-size: small;
+/* -------------------responsive ------------------- */
+
+@media (max-width: 376px) {
+  .ft-large {
+    font-size: medium;
+  }
+}
+
+/* ------------------------------------------------------------------------- */
+/* common classes over */
+/* ------------------------------------------------------------------------- */
+
+/* ---------------------------------------
+          product list 1 
+-------------------------------------------*/
+
+.best-deal-and-time {
+  display: flex;
+  align-items: center;
+}
+
+.deals-text {
+  margin-right: 8px;
+}
+
+.clock-icon {
+  color: red;
+  margin-inline: 8px;
 }
 
 /* ------------Responsive Product List 1------------ */
 
-@media (max-width: 320px) {
-  .deals-text {
-    font-weight: 600;
-    font-size: medium;
-    margin-right: 0px;
+@media (max-width: 376px) {
+  .best-deal-and-time {
+    flex-direction: column;
+    align-items: flex-start;
   }
   .clock-icon {
+    display: none !important;
     margin-inline: 5px;
     font-size: 10px;
   }
   .time-text {
+    color: red;
     font-size: 14px;
   }
-  .best-deal-and-time {
-    justify-content: space-between;
+  .deals-text {
+    margin-right: 0px;
   }
 }
 
@@ -303,6 +338,8 @@ img {
 
 #special-offer-section {
 }
+
+/* --------------------responsive container------------------------ */
 
 @media (max-width: 768px) {
   #special-offer-section {
@@ -316,6 +353,32 @@ img {
   }
 }
 
+/* --------------------------------------------------------------------- */
+
+/* -------------------------------------------
+                Product-list-2 
+----------------------------------------------*/
+
 #product-list-2 {
   grid-column: 1 / span 2;
+}
+
+.Product-list-2-heading-books-and-more {
+  margin-bottom: 5px;
+}
+
+.product-list-2-sub-heading-shopNow {
+  font-weight: 100;
+  font-size: 15px;
+  color: grey;
+}
+
+/* -----------------------------------------------------
+          responsive product list 2
+-------------------------------------------------------- */
+
+@media (max-width: 376px) {
+  .product-list-2-sub-heading-shopNow {
+    display: none;
+  }
 }
