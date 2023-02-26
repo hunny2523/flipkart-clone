@@ -30,6 +30,7 @@ input {
   padding: 10px;
   border-radius: 2px;
   margin-inline: 5px;
+  outline: none;
 }
 
 img {
@@ -142,6 +143,44 @@ img {
   }
 }
 
+/* --------------------------------------------- */
+/* ----------------Navbar Footer for mobile phone----------- */
+
+.nav-footer {
+  width: 100%;
+  background-color: #2874f0;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  padding: 10px 0;
+  box-shadow: -2px -2px 6px grey;
+}
+
+.nav-footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+}
+
+.nav-footer-link .nav-footer-icon {
+  font-weight: 200;
+}
+
+@media (max-width: 750px) {
+  .nav-footer {
+    display: block;
+  }
+}
+
 /* ----------------------------------
             Navbar Completed
 ------------------------------------*/
@@ -177,6 +216,10 @@ img {
   font-weight: 500;
   font-size: 14px;
   white-space: nowrap;
+}
+
+.category-item-name span {
+  font-weight: 200;
 }
 
 .category-image {
@@ -232,6 +275,11 @@ img {
   color: white;
 }
 
+.main-container-blue-btn:hover {
+  background-color: #004dca;
+  color: white;
+}
+
 .product-list-items {
   flex: 1;
   display: flex;
@@ -266,6 +314,11 @@ img {
   max-width: 100%;
   max-height: 150px;
   margin: auto 0;
+  transition: 0.5s;
+}
+
+.product-list-item img:hover {
+  transform: scale(1.08);
 }
 
 .product-list-item-info {
